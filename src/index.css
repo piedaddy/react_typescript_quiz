@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: 'Catamaran', sans-serif;
+  /* font-family: 'Fascinate Inline', cursive; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  background-image: url('./images/beach.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 100%;
+  padding: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
