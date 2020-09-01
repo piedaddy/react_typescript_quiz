@@ -36,9 +36,9 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
       correct
         ? "linear-gradient(90deg, #56ffa4, #59bc86)"
         : !correct && userClicked
-        ? "linear-gradient(90deg, #ff5656, #c16868"
-        : "linear-gradient(90deg, #56ccff, #6aefb4"}
-    border: 3px solid #fff;
+        ? "linear-gradient(90deg, #ff5656, #c16868)"
+        : "linear-gradient(90deg, #56ccff, #6aefb4)"};
+    border: 3px solid #ffffff;
     box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     color: #fff;

@@ -22,7 +22,6 @@ const App: React.FC = () => {
   const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([]);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true);
-  // const [show, setShow] = useState(false)
 
   const startTrivia = async () => {
     setLoading(true);
@@ -32,7 +31,7 @@ const App: React.FC = () => {
       Difficulty.EASY
     );
     setQuestions(newQuestions);
-    console.log('questions', questions)
+    console.log("questions", questions);
     setScore(0);
     setUserAnswers([]);
     setNumber(0);
@@ -80,16 +79,16 @@ const App: React.FC = () => {
         ) : null}
         {!gameOver && <p className="score">Score: {score} </p>}
         {loading && <p className="">Loading Questions ...</p>}
-        {/* {!loading && !gameOver && (
-          // <QuestionCard
-          //   questionNumber={number + 1}
-          //   totalQuestions={TOTAL_QUESTIONS}
-          //   question={questions[number].question}
-          //   answers={questions[number].answers}
-          //   userAnswer={userAnswers ? userAnswers[number] : undefined}
-          //   callback={checkAnswer}
-          // />
-        )} */}
+        {!loading && !gameOver && (
+          <QuestionCard
+            questionNumber={number + 1}
+            totalQuestions={TOTAL_QUESTIONS}
+            question={questions[number].question}
+            answers={questions[number].answers}
+            userAnswer={userAnswers ? userAnswers[number] : undefined}
+            callback={checkAnswer}
+          />
+        )}
         {!gameOver &&
         !loading &&
         userAnswers.length === number + 1 &&
